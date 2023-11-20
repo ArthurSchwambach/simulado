@@ -1,5 +1,10 @@
 alert("Calcule seu IMC. Para terminar o programa, aperte em 'Cancelar'");
 
+var soma = 0
+var pessoasMaior30 = 0
+var = pessoas = 0
+
+
 function imc(peso, altura) {
   return peso / (altura * altura);
 }
@@ -21,6 +26,8 @@ function tiposimc(imc) {
 }
 
 for (var i = 0; i < 10; i++) {
+    pessoa++
+    soma++
   var peso = parseFloat(prompt("Digite o seu peso (Inteiros ou Decimais): "));
   if (peso === null || isNaN(peso)) {
     console.log("Terminando o programa");
@@ -33,10 +40,13 @@ for (var i = 0; i < 10; i++) {
     break;
   }
 
+  if (imc > 30) pessoasMaior30++
+
   var calculoIMC = imc(peso, altura);
   var tipos = tiposimc(calculoIMC);
+  var mediaIMC = (soma / pessoas).toFixed(2);
 
-  console.log(
-    `Pessoa ${i + 1}: IMC = ${calculoIMC.toFixed(2)}, Classificação = ${tipos}`
-  );
+  console.log( 
+  `Pessoa ${i + 1}: IMC = ${calculoIMC.toFixed(2)}, Classificação = ${tipos}`
+);
 }
