@@ -46,7 +46,12 @@ for (var i = 0; i < 10; i++) {
   var tipos = tiposimc(calculoIMC);
   var mediaIMC = (soma / pessoas).toFixed(2);
 
+  }
   console.log( 
-  `Pessoa ${i + 1}: IMC = ${calculoIMC.toFixed(2)}, Classificação = ${tipos}`
+  `Pessoa ${i + 1}: IMC = ${calculoIMC.toFixed(2)}, Classificação = ${tipos}
+  Media do IMC: ${mediaIMC}
+  Quantidade de Pessoas: ${pessoas}
+  Pessoas com mais de 30 de IMC: ${pessoasMaior30}
+  `
 );
 }
